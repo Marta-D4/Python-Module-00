@@ -1,8 +1,15 @@
-def ft_seed_inventory(type: str, quantity: int, units: str) -> None:
-    seed = type.capitalize()
-    if units == "packets":
-        print(type, "seeds:", quantity, "packets available")
-    elif units == "grams":
-        print(type, "seeds:", quantity, "grams total")
-    elif units == "area":
-        print(type, "seeds:", quantity, "square meters")
+def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
+    seed_type = seed_type.capitalize()
+    if unit == "packets":
+        print(f"{seed_type} seeds: {quantity} {unit} available")
+    elif unit == "grams":
+        print(f"{seed_type} seeds: {quantity} {unit} total")
+    elif unit == "area":
+        print(f"{seed_type} seeds: cover {quantity} square meters")
+    else:
+        print(f"{seed_type} seeds: {quantity} {unit}")
+
+""" ft_seed_inventory("tomato", 15, "packets")
+ft_seed_inventory("carrot", 8, "grams")
+ft_seed_inventory("lettuce", 12, "area")
+ft_seed_inventory("lemon", 2, "meters") """
